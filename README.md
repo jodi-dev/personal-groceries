@@ -23,3 +23,8 @@ SEG3125 Lab 2.
 ## Inspirations
 
 I will be using Bootstrap Studio to design a basic layout. Bootstrap 4 components will be used to expediate the frontend implementation.
+
+
+## References
+
+- [Bootstrap Cards loop](https://stackoverflow.com/questions/63074270/create-a-loop-of-bootstrap-4-card-with-given-array)
