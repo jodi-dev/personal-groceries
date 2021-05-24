@@ -1,3 +1,4 @@
+// name, price, allergen, bool
 var all_items = [
     ['Almond milk', '$5', 'nuts'],
     ['Milk', '$4', 'dairy'],
@@ -71,13 +72,13 @@ $(document).ready( function filterProds() {
         }
     });
 
+
+    // apply selections
     $('#apply').click(function() {
         alert("my allergies are: " + allergiesChecked.join(","));
     });
-});
 
-// clear button
-$(document).ready( function clearSelections() {
+    // clear selections
     $("#clear").click(function() {
         document.getElementById("nuts").checked = false;
         document.getElementById("dairy").checked = false;

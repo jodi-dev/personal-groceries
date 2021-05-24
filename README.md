@@ -20,9 +20,16 @@ SEG3125 Lab 2.
 - The use of JavaScript (separate files) to contain the script associated with the site.
 
 
-## Inspirations
+## Motivation
 
-I will be using Bootstrap Studio to design a basic layout. Bootstrap 4 components will be used to expediate the frontend implementation.
+I will be using Bootstrap Studio to design a basic layout. Bootstrap 4 components will be used to expediate the frontend implementation. I will also be using JavaScript blended with JQuery elements because I got too ambitious in my concepts and started planning for complicated functionalities, hence it would take too long at my level to be writing only JavaScript.
+
+Alterations in design compared to the Prof's template to improve application functionality:
+
+1. Allergies selectable by checkboxes as opposed to single select as an individual may have multiple allergies; this is an improvement in design as the functionality of the application is better suited to user needs
+1. Product selection in cards and laid out on screen at all times as opposed to being in a tab, tabs however are moved to the right hand side as a component on the page to allow the users to look at available products and modify their selection at all times
+
+I've decided to 
 
 
 ## References
