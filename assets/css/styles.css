@@ -1,0 +1,8 @@
+/*https://stackoverflow.com/questions/38895106/how-to-limit-number-of-columns-of-card-deck*/
+.card-deck{
+    margin-top: 10px;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: .5rem;
+}

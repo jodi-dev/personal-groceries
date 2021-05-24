@@ -21,7 +21,7 @@
             <div class="col-md-6" style="max-width: 70%;min-width: 70%;">
                 <div class="row">
                     <div class="col">
-                        <div class="card-group" id="shop" onload="loadCards()">
+                        <div class="card-deck" id="shop" onload="loadCards()">
                         </div>
                     </div>
                 </div>
@@ -35,26 +35,31 @@
                     <div class="tab-content">
                         <div class="tab-pane active" role="tabpanel" id="tab-1">
                             <p>Content for tab 1.</p>
-                            <div class="row">
-                                <div class="col">
-                                    <h5>Allergies</h5>
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Label</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Label</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Label</label></div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5>Allergies</h5>
+                                            <form>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="nuts" name="allergy" value="nuts"><label class="form-check-label" for="nuts">Nuts</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="dairy" name="allergy" value="dairy"><label class="form-check-label" for="dairy">Dairy</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="berries" name="allergy" value="berries"><label class="form-check-label" for="berries">Berries</label></div>
+                                            </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h5>Price Range</h5><input type="text"><input type="text">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5>Price Range</h5><input type="text"><input type="text">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h5>Accessibility</h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5>Accessibility</h5>
+                                        <button>a</button>
+                                        <button>A</button>
+                                    </div>
                                 </div>
-                            </div>
                             <div class="row">
-                                <div class="col"><button class="btn btn-primary" type="button">Button</button></div>
+                                <div class="col"><button class="btn btn-primary" type="button" id="apply">Apply</button></div>
+                                <div class="col"><button class="btn btn-primary" type="button" id="clear">Clear</button></div>
                             </div>
                         </div>
                         <div class="tab-pane" role="tabpanel" id="tab-2">
@@ -70,32 +75,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
-    <script type="text/javascript" src="js/groceries.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/products_cards.js"></script>
-    <script>
-        var items = [
-        ['Logitek', 'Rp 60.000,00', 'Logitek Keyboard', 'logitek.jpeg'],
-        ['MSI', 'Rp 300.000,00', 'MSI Keyboard', 'msi.jpeg'],
-        ['Genius', 'Rp 50.000,00', 'Genius Mouse', 'genius.jpeg'],
-        ['Jerry', 'Rp 30.000,00', 'Jerry Mouse', 'jerry.jpeg']
-        ]
-        let content = '';
-        items.forEach(p=> {
-            content += 
-            `<div class="card"><img class="card-img-top w-100 d-block">
-                <div class="card-body">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="">
-                            <label class="form-check-label" for="formCheck-1"></label>
-                    </div>
-                    <h4 class="card-title">${p[0]}</h4>
-                    <p class="card-text">${p[1]}</p>
-                </div>
-            </div>`
-        });
-        document.getElementById("shop").innerHTML = content;
-    </script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/groceries_list.js"></script>
 </body>
 
 </html>

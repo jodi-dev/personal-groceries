@@ -27,4 +27,7 @@ I will be using Bootstrap Studio to design a basic layout. Bootstrap 4 component
 
 ## References
 
+Some sizeable code chunks taken from:
+
 - [Bootstrap Cards loop](https://stackoverflow.com/questions/63074270/create-a-loop-of-bootstrap-4-card-with-given-array)
+- [Restricting Card-deck sizing](https://stackoverflow.com/questions/38895106/how-to-limit-number-of-columns-of-card-deck)
