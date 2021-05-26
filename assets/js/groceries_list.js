@@ -1,8 +1,8 @@
 // name, price, allergen, bool
 var all_items = [
-    ['Almond milk', '5', 'nuts'],
+    ['Cashews', '5', 'nuts'],
     ['Milk', '4', 'dairy'],
-    ['Diet coke', '2', 'none'],
+    ['Pepsi', '2', 'none'],
     ['Strawberries', '5', 'berries'],
     ['Granola bars', '6', 'nuts'],
     ['Blueberries', '4', 'berries'],
@@ -81,25 +81,12 @@ $(document).ready( function filterProds() {
         maxPrice = $(this).val();
     });
 
+    $('input[name="product"]').change(function() {
+        selectedItems();
+    });
+
     // apply selections
     $('#apply').click(function() {
-        let filtered = [];
-        let v;
-        alert("my allergies are: " + allergiesChecked.join(","));
-        for (let i = 0; i<all_items.length; i+=1) {
-            v = true;
-            for (let j = 0; j<allergiesChecked.length; j+=1) {
-                if (all_items[i][2] == allergiesChecked[j]) {
-                    v = false;
-                }
-            }
-            if (v == true) {
-                filtered.push(all_items[i]);
-            }
-            //filtered.push(all_items[i]);
-        }
-        alert("my items are: " + filtered.join(","));
-        filtered_items = filtered;
     });
 
     // clear selections

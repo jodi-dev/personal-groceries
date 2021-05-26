@@ -23,17 +23,29 @@ $(document).ready(function(){
 });
 
 function updateShop(shop) {
-    alert("!");
+    let filtered = [];
+    let v;
+    //alert("my allergies are: " + allergiesChecked.join(","));
+    for (let i = 0; i<all_items.length; i+=1) {
+        v = true;
+        for (let j = 0; j<allergiesChecked.length; j+=1) {
+            if (all_items[i][2] == allergiesChecked[j]) {
+                v = false;
+            }
+        }
+        if (v == true) {
+            filtered.push(all_items[i]);
+        }
+        //filtered.push(all_items[i]);
+    }
+    //alert("my items are: " + filtered.join(","));
+    filtered_items = filtered;
+    
     var shop = document.getElementById(shop);	
     shop.innerHTML = "";
 
-	// for each item in the array, create a checkbox element, each containing information such as:
-	// <input type="checkbox" name="product" value="Bread">
-	// <label for="Bread">Bread/label><br>
-		
 	for (let i = 0; i < filtered_items.length; i+= 1) {
-        //alert(filtered_items[i][0]);
-			
+
 		let card = document.createElement('div');
         card.className = 'card';
         let cardBody = document.createElement('div');
@@ -64,7 +76,7 @@ function selectedItems(){
 	c.innerHTML = "";
 	
 	// build list of selected item
-	let para = document.createElement("P");
+	let para = document.createElement("p");
 	para.innerHTML = "You selected : ";
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 

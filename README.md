@@ -35,3 +35,4 @@ Some sizeable code chunks taken from:
 
 - [Bootstrap Cards loop](https://stackoverflow.com/questions/63074270/create-a-loop-of-bootstrap-4-card-with-given-array)
 - [Restricting Card-deck sizing](https://stackoverflow.com/questions/38895106/how-to-limit-number-of-columns-of-card-deck)
+- [Update DOM cards](https://stackoverflow.com/questions/54868328/html-how-to-automatically-create-bootstrap-cards-from-a-js-file)
