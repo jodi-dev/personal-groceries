@@ -104,12 +104,13 @@ $(document).ready( function filterProds() {
 
     // clear selections
     $("#clear").click(function() {
-        document.getElementById("nuts").checked = false;
-        document.getElementById("dairy").checked = false;
-        document.getElementById("berries").checked = false;
-        minPrice = 0;
-        maxPrice = 100;
-        allergiesChecked = [];
+        // document.getElementById("nuts").checked = false;
+        // document.getElementById("dairy").checked = false;
+        // document.getElementById("berries").checked = false;
+        // minPrice = 0;
+        // maxPrice = 100;
+        // allergiesChecked = [];
+        window.location.reload();
         alert("All selections cleared");
     });
 });
