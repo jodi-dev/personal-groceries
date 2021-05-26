@@ -29,9 +29,6 @@ Alterations in design compared to the Prof's template to improve application fun
 1. Allergies selectable by checkboxes as opposed to single select as an individual may have multiple allergies; this is an improvement in design as the functionality of the application is better suited to user needs
 1. Product selection in cards and laid out on screen at all times as opposed to being in a tab, tabs however are moved to the right hand side as a component on the page to allow the users to look at available products and modify their selection at all times
 
-I've decided to 
-
-
 ## References
 
 Some sizeable code chunks taken from:
