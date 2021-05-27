@@ -1,15 +1,15 @@
 // name, price, allergen, bool
 var all_items = [
-    ['Cashews', '5', 'nuts'],
-    ['Milk', '4', 'dairy'],
-    ['Pepsi', '2', 'none'],
-    ['Strawberries', '5', 'berries'],
-    ['Granola bars', '6', 'nuts'],
-    ['Blueberries', '4', 'berries'],
-    ['Bread', '2', 'gluten'],
-    ['Cereal', '5', 'gluten'],
-    ['Cheese', '7', 'dairy'],
-    ['Beef', '12', 'none']
+    ['Cashews', '5', 'nuts', 'y'],
+    ['Milk', '4', 'dairy', 'y'],
+    ['Pepsi', '2', 'none', 'n'],
+    ['Strawberries', '5', 'berries', 'y'],
+    ['Nutella', '6', 'nuts', 'n'],
+    ['Blueberries', '4', 'berries', 'y'],
+    ['Bread', '2', 'gluten', 'n'],
+    ['Cereal', '5', 'gluten', 'n'],
+    ['Cheese', '7', 'dairy', 'n'],
+    ['Beef', '12', 'none', 'n']
 ]
 
 var filtered_items;
@@ -18,6 +18,7 @@ var minPrice = 0;
 var maxPrice = 100;
 
 var allergiesChecked = [];
+var organicOnly = false;
 
 $(document).ready( function filterProds() {
     // document change listeners
@@ -54,20 +55,11 @@ $(document).ready( function filterProds() {
             }
         }
     });
-    $('#berries').change(function() {
-        if(this.checked) {
-            //alert('berries allergy');
-            if (! allergiesChecked.includes($(this).val())) {
-                allergiesChecked.push($(this).val());
-            }
+    $('#organic').change(function() {
+        if (this.checked) {
+            organicOnly = true;
         } else {
-            //alert('remove berries allergy');
-            if (allergiesChecked.includes($(this).val())) {
-                var index = allergiesChecked.indexOf($(this).val());
-                if (index >= 0) {
-                    allergiesChecked.splice( index, 1);
-                }
-            }
+            organicOnly = false;
         }
     });
 

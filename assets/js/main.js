@@ -28,17 +28,47 @@ function updateShop(shop) {
     let filtered = [];
     let v;
     //alert("my allergies are: " + allergiesChecked.join(","));
-    for (let i = 0; i<all_items.length; i+=1) {
-        v = true;
-        for (let j = 0; j<allergiesChecked.length; j+=1) {
-            if (all_items[i][2] == allergiesChecked[j]) {
-                v = false;
+    if (organicOnly == false && allergiesChecked.length > 0) {
+        for (let i = 0; i<all_items.length; i+=1) {
+            v = true;
+            for (let j = 0; j<allergiesChecked.length; j+=1) {
+                if (all_items[i][2] == allergiesChecked[j]) {
+                    v = false;
+                }
             }
+            if (v == true) {
+                filtered.push(all_items[i]);
+            }
+            //filtered.push(all_items[i]);
         }
-        if (v == true) {
-            filtered.push(all_items[i]);
+    }
+    if (organicOnly == true && allergiesChecked.length == 0) {
+        for (let i = 0; i<all_items.length; i+=1) {
+            if (all_items[i][3] == 'y') {
+                filtered.push(all_items[i]);
+            }
+            //filtered.push(all_items[i]);
         }
-        //filtered.push(all_items[i]);
+    }
+    if (organicOnly == true && allergiesChecked.length > 0) {
+        for (let i = 0; i<all_items.length; i+=1) {
+            v = true;
+            for (let j = 0; j<allergiesChecked.length; j+=1) {
+                if (all_items[i][2] == allergiesChecked[j]) {
+                    v = false;
+                }
+                if (all_items[i][3] != 'y') {
+                    v = false;
+                }
+            }
+            if (v == true) {
+                filtered.push(all_items[i]);
+            }
+            //filtered.push(all_items[i]);
+        }
+    }
+    if (organicOnly == false && allergiesChecked.length == 0) {
+        filtered = all_items;
     }
     //alert("my items are: " + filtered.join(","));
     filtered_items = filtered;
