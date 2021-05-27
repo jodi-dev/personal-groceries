@@ -1,13 +1,13 @@
 // name, price, allergen, bool
 var all_items = [
-    ['Cashews', '5', 'nuts', 'y'],
-    ['Milk', '4', 'dairy', 'y'],
     ['Pepsi', '2', 'none', 'n'],
-    ['Strawberries', '5', 'berries', 'y'],
-    ['Nutella', '6', 'nuts', 'n'],
-    ['Blueberries', '4', 'berries', 'y'],
     ['Bread', '2', 'gluten', 'n'],
+    ['Blueberries', '4', 'berries', 'y'],
+    ['Milk', '4', 'dairy', 'y'],
+    ['Cashews', '5', 'nuts', 'y'],
+    ['Strawberries', '5', 'berries', 'y'],
     ['Cereal', '5', 'gluten', 'n'],
+    ['Nutella', '6', 'nuts', 'n'],
     ['Cheese', '7', 'dairy', 'n'],
     ['Beef', '12', 'none', 'n']
 ]
