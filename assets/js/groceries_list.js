@@ -81,22 +81,34 @@ $(document).ready( function filterProds() {
         maxPrice = $(this).val();
     });
 
-    $('input[name="product"]').change(function() {
-        selectedItems();
+    // $('input[name="product"]').change(function() {
+    //     selectedItems();
+    // });
+
+    $(document).on("change", 'input[name="product"]', function() {
+        // Your code here
+        if (this.checked) {
+            selectedItems();
+        } else {
+            chosenProducts = [];
+            selectedItems();
+        }
     });
 
     // apply selections
-    $('#apply').click(function() {
+    $('#checkout').click(function() {
+        alert("You have checked out!");
+        window.location.reload();
     });
 
     // clear selections
     $("#clear").click(function() {
-        // document.getElementById("nuts").checked = false;
-        // document.getElementById("dairy").checked = false;
-        // document.getElementById("berries").checked = false;
-        // minPrice = 0;
-        // maxPrice = 100;
-        // allergiesChecked = [];
+        //document.getElementById("nuts").checked = false;
+        //document.getElementById("dairy").checked = false;
+        //document.getElementById("berries").checked = false;
+        //minPrice = 0;
+        //maxPrice = 100;
+        //allergiesChecked = [];
         window.location.reload();
         alert("All selections cleared");
     });

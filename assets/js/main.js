@@ -5,11 +5,11 @@ $(document).ready(function(){
         all_items.forEach(p=> {
             content += 
             `
-            <div class="card"><img class="card-img-top w-100 d-block">
+            <div class="card">
                 <div class="card-body">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="product" value=${p[0]}>
-                            <label class="form-check-label" for="formCheck-1"></label>
+                        <label class="form-check-label"></label>
                     </div>
                     <h4 class="card-title">${p[0]}</h4>
                     <p class="card-text">$ ${p[1]}</p>
@@ -17,10 +17,12 @@ $(document).ready(function(){
             </div>`
         });
         document.getElementById("shop").innerHTML = content;
-    } 
+    }
     document.getElementById("min-price").value = minPrice;
     document.getElementById("max-price").value = maxPrice;
 });
+
+var chosenProducts = [];
 
 function updateShop(shop) {
     let filtered = [];
@@ -46,6 +48,8 @@ function updateShop(shop) {
 
 	for (let i = 0; i < filtered_items.length; i+= 1) {
 
+        var productName = filtered_items[i][0];
+        var productPrice = filtered_items[i][1];
 		let card = document.createElement('div');
         card.className = 'card';
         let cardBody = document.createElement('div');
@@ -53,15 +57,26 @@ function updateShop(shop) {
         let formCheck = document.createElement('div');
         formCheck.className = 'form-check';
         let checkBox = document.createElement("input");
+        checkBox.className = "form-check-input";
         checkBox.type = "checkbox";
 		checkBox.name = "product";
-		checkBox.value = filtered_items[i][0];
+		checkBox.value = productName;
         let cardTitle = document.createElement('h4');
-        cardTitle.innerText = filtered_items[i][0];
+        cardTitle.innerText = productName;
+        let cardText = document.createElement('p');
+        cardText.className = 'card-text';
+        cardText.innerText = '$ ' + productPrice;
+
+        var label = document.createElement('label')
+        label.className = 'form-check-label';
+		//label.htmlFor = productName;
+		//label.appendChild(document.createTextNode(productName));
 
         formCheck.appendChild(checkBox);
-        cardBody.appendChild(cardTitle);
+        formCheck.appendChild(label);
         cardBody.appendChild(formCheck);
+        cardBody.appendChild(cardTitle);
+        cardBody.appendChild(cardText);
         card.appendChild(cardBody);
         shop.appendChild(card);
 	}
@@ -70,7 +85,6 @@ function updateShop(shop) {
 function selectedItems(){
 	
 	let ele = document.getElementsByName("product");
-	let chosenProducts = [];
 	
 	let c = document.getElementById('displayCart');
 	c.innerHTML = "";
@@ -89,6 +103,23 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	//c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
 		
+}
+
+// Calculate the total price of items, with received parameter being a list of products
+function getTotalPrice(chosenProducts) {
+	totalPrice = 0;
+
+    if (chosenProducts.length > 0) {
+        for (let i=0; i<chosenProducts.length; i+=1) {
+            for (let j=0; j<all_items.length;j+=1 ) {
+                if (chosenProducts[i] == all_items[j][0]) {
+                    totalPrice += parseInt(all_items[j][1]);
+                }
+            }
+	    }
+    }
+	
+	return totalPrice;
 }
