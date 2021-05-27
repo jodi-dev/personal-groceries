@@ -23,3 +23,13 @@
 .pull-right {
     text-align: right;
 }
+
+#main {
+    margin-bottom: 10rem;
+}
+
+#foot {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
