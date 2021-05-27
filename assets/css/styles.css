@@ -11,3 +11,15 @@
     max-height: 100%;
     min-height: 50vh;
 }
+
+.top-row {
+    min-height: 150px;
+}
+
+.tab-row {
+    padding-top: 2rem;
+}
+
+.pull-right {
+    text-align: right;
+}

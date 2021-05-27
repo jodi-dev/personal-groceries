@@ -4,10 +4,9 @@ $(document).ready(function(){
     if (allergiesChecked.length == 0) {
         all_items.forEach(p=> {
             content += 
-            `
-            <div class="card">
+            `<div class="card">
                 <div class="card-body">
-                    <div class="form-check">
+                    <div class="form-check pull-right">
                         <input class="form-check-input" type="checkbox" name="product" value=${p[0]}>
                         <label class="form-check-label"></label>
                     </div>
@@ -85,7 +84,7 @@ function updateShop(shop) {
         let cardBody = document.createElement('div');
         cardBody.className = 'card-body';
         let formCheck = document.createElement('div');
-        formCheck.className = 'form-check';
+        formCheck.className = 'form-check pull-right';
         let checkBox = document.createElement("input");
         checkBox.className = "form-check-input";
         checkBox.type = "checkbox";

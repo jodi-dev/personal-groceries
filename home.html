@@ -30,31 +30,35 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" role="tabpanel" id="tab-1">
-                            <div class="row">
+                            <div class="row tab-row top-row">
                                 <div class="col">
-                                    <div class="flex align-items-start flex-column">
-                                        <h5>Preferences</h5>
-                                        <form>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="nuts" name="allergy" value="nuts"><label class="form-check-label" for="nuts">No nuts</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="dairy" name="allergy" value="dairy"><label class="form-check-label" for="dairy">No dairy</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="organic" name="organic" value="organic"><label class="form-check-label" for="berries">Organic only</label></div>
-                                        </form>
-                                    </div>
+                                    <h5>Preferences</h5>
+                                    <form>
+                                        <div class="form-check"><input class="form-check-input" type="checkbox" id="nuts" name="allergy" value="nuts"><label class="form-check-label" for="nuts">No nuts</label></div>
+                                        <div class="form-check"><input class="form-check-input" type="checkbox" id="dairy" name="allergy" value="dairy"><label class="form-check-label" for="dairy">No dairy</label></div>
+                                        <div class="form-check"><input class="form-check-input" type="checkbox" id="organic" name="organic" value="organic"><label class="form-check-label" for="berries">Organic only</label></div>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col"><button class="btn btn-primary" type="button" id="apply" onclick="updateShop('shop')">Apply Customizations</button></div>
+                            <div class="row tab-row">
+                                <div class="col text-center"><button class="btn btn-primary btn-block" type="button" id="apply" onclick="updateShop('shop')">Apply Customizations</button>
+                                <button class="btn btn-secondary btn-block" type="button" id="clear">Clear Shopping Session & Restart</button>
+                                </div>
+    
                             </div>
                         </div>
                         <div class="tab-pane" role="tabpanel" id="tab-2">
-                            <h5>Cart</h5>
-                            <div id="displayCart"></div>
-                            <div class="col"><button class="btn btn-primary" type="button" id="checkout">Checkout Groceries</button></div>
+                            <div class="row tab-row top-row">
+                                <div class="col">
+                                    <h5>Cart</h5>
+                                    <div id="displayCart"></div>
+                                </div>
+                            </div>
+                            <div class="row tab-row">
+                                <div class="col text-center"><button class="btn btn-primary btn-block" type="button" id="checkout">Checkout Groceries</button></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <button class="btn btn-secondary" type="button" id="clear">Clear Shopping Session & Restart</button>
                 </div>
             </div>
         </div>
