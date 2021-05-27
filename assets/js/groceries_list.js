@@ -13,7 +13,6 @@ var all_items = [
 ]
 
 var filtered_items;
-
 var minPrice = 0;
 var maxPrice = 100;
 
