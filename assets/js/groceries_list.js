@@ -9,7 +9,9 @@ var all_items = [
     ['Cereal', '5', 'gluten', 'n'],
     ['Nutella', '6', 'nuts', 'n'],
     ['Cheese', '7', 'dairy', 'n'],
-    ['Beef', '12', 'none', 'n']
+    ['Beef', '12', 'none', 'n'],
+    ['Poutry', '13', 'none', 'n'],
+    ['Mouthwash', '15', 'none', 'n']
 ]
 
 var filtered_items;
