@@ -81,6 +81,7 @@ $(document).ready( function filterProds() {
     $(document).on("change", 'input[name="product"]', function() {
         // Your code here
         if (this.checked) {
+            chosenProducts = [];
             selectedItems();
         } else {
             chosenProducts = [];
