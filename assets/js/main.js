@@ -133,7 +133,6 @@ function selectedItems(){
 	// add paragraph and total price
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Total Price is: $" + getTotalPrice(chosenProducts)));
-		
 }
 
 // Calculate the total price of items, with received parameter being a list of products
