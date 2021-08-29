@@ -20,6 +20,6 @@ Some sizeable code chunks taken from:
 
 ## Launch
 
-(Click Here)[personal-groceries.herokuapp.com]
+[Click Here](personal-groceries.herokuapp.com)
 
 For these repo, it's likely I have the app hosted at heroku with /repo name/.herokuapp.com
